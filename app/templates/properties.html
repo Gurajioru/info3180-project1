@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h2>View Properties</h2>
+{% include 'flash_messages.html' %}
+    <div class="grid-prop">
+        {%for property in properties%}
+            <div class="prop-body">
+                <div class="pic">
+                    <img src="{{ url_for('get_image', filename= property.photo) }}" />
+                </div>
+
+                <div class="text">
+                    <h3>{{property.title}}</h3>
+                    <span><ion-icon name="location-outline"></ion-icon>{{property.location}}</span>
+                    <br>
+                    <span>${{property.price}}</span>
+                    <a class="viewer" href="{{url_for('oneProperty', propertyid=property.id)}}">View Property</a>
+
+                </div>
+                
+            </div>    
+        {%endfor%}
+    </div>
+{% endblock %}

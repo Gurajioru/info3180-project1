@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">My App</a>
+    <a class="navbar-brand" href="#"><ion-icon name="home-outline"></ion-icon> Project 1</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,6 +15,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('about') }}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('create') }}">New Property</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('properties') }}">Properties</a>
         </li>
       </ul>
     </div>

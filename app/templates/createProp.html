@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% include 'flash_messages.html' %}
+<form action="{{ url_for('create') }}" method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    <div class="form-group mb-3">
+        {{ form.title.label }}
+        {{ form.title }}
+    </div>
+    <div class="form-group mb-3">
+        {{ form.description.label }}
+        {{ form.description }}
+    </div>
+    <section class="grided-options">
+        <div class="form-group mb-3">
+            {{ form.bathrooms.label }}
+            {{ form.bathrooms}}
+        </div>
+
+        <div class="form-group mb-3">
+            {{ form.bedrooms.label }}
+            {{ form.bedrooms }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.price.label }}
+            {{ form.price }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.type.label }}
+            {{ form.type }}
+        </div>
+    </section>
+    <div class="form-group mb-3">
+        {{ form.location.label }}
+        {{ form.location }}
+    </div>
+    <div class="form-group mb-3">
+        {{ form.photo.label }}
+        {{ form.photo }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Property</button>
+</form>
+{% endblock %}
