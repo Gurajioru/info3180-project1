@@ -68,8 +68,9 @@ def create():
     
 
 @app.route('/properties/<propertyid>')
-def oneProperty():
-    return 0
+def oneProperty(propertyid):
+    property = PropertyInfo.query.filter_by(id=propertyid).first()
+    return render_template('propInfo.html', property=property)
 
 @app.route('/')
 def home():

@@ -16,3 +16,23 @@ label{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display:block;
 }
+
+img{
+    height:260px;
+    width: 330px;
+    object-fit: cover;
+
+}
+
+.grid-prop{
+    display:grid;
+    grid-template-columns:repeat(3, 300px);
+    grid-gap:15px;
+}
+
+.prop-body{
+    background-color: aliceblue;
+    
+    box-shadow: 5px 5px 5px 5px #E2E8F0;
+}
+

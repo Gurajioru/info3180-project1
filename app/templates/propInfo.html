@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+{% include 'flash_messages.html' %}
+    <div class="one">
+        <img  src="{{ url_for('get_image', filename=property.photo) }}"/>
+
+        <div class="singleInfo">
+            <h2>{{property.title}}</h2>
+            <div class="price-type">
+                <span class="price">${{property.price}} </span>
+                <span class="price">{{property.type}} </span>
+            </div>
+
+            <p>{{property.description}}</p>
+
+            <div class="room-address">
+                <span> <ion-icon name="bed-outline"></ion-icon> {{property.bedrooms}} bedrooms</span>
+                <span> <ion-icon name="storefront-outline"></ion-icon> {{property.bathrooms}} bathrooms</span>
+                <span> <ion-icon name="location-outline"></ion-icon> {{property.location}}</span>
+            </div>
+            <button class="email">Email Realtor</button>
+        </div>
+    </div>
+{% endblock %}

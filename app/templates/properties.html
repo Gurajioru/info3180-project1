@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block main %}
-<h2>View Properties</h2>
+<h2>Properties</h2>
 {% include 'flash_messages.html' %}
     <div class="grid-prop">
         {%for property in properties%}
@@ -14,7 +14,7 @@
                     <h3>{{property.title}}</h3>
                     <span><ion-icon name="location-outline"></ion-icon>{{property.location}}</span>
                     <br>
-                    <span>${{property.price}}</span>
+                    <span>${{property.price}} </span>
                     <a class="viewer" href="{{url_for('oneProperty', propertyid=property.id)}}">View Property</a>
 
                 </div>
