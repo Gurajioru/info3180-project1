@@ -1,6 +1,8 @@
 body {
     padding-top: 5rem;
-    background-color: rgb(160, 160, 160);
+    background-color: rgb(231, 227, 227);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
 
 form{
@@ -8,16 +10,17 @@ form{
     padding-top:2rem;
     padding-left:2rem;
     padding-bottom:2rem;
-
+    width:900px;
+    max-width: 1200px;
 
 }
 label{
     font-weight: bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
     display:block;
 }
 
-img{
+.pic > img{
     height:260px;
     width: 330px;
     object-fit: cover;
@@ -26,13 +29,120 @@ img{
 
 .grid-prop{
     display:grid;
-    grid-template-columns:repeat(3, 300px);
+    grid-template-columns: repeat(auto-fill, 330px);
     grid-gap:15px;
 }
 
 .prop-body{
-    background-color: aliceblue;
+    background-color: rgb(247, 245, 242);
+}
+
+.text{
+    padding-left:10px;
+}
+
+.location-all{
+    color:rgb(122, 120, 120);
+}
+
+.price-all{
+    background-color: rgb(100, 189, 224);
+    border-radius:20px;
+    color:white;
+    padding:3px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    padding-left:16px;
+    padding-right:16px;
+    text-decoration: none;
     
-    box-shadow: 5px 5px 5px 5px #E2E8F0;
+}
+
+
+.viewer{
+    display:block;
+    text-align: center;
+    background-color: rgb(8, 167, 167);
+    color:white;
+    text-decoration: none;
+    padding-top:8px;
+    padding-bottom:8px;
+
+    
+}
+
+#title, #description{
+    width:700px;
+}
+
+#description{
+    height:100px;
+}
+
+.grided-options{
+    display:grid;
+    grid-template-columns: 400px 400px;
+    grid-gap:10px;
+}
+
+#bedrooms, #bathrooms, #type, #price, #location{
+    width:300px;
+    height:35px;
+}
+
+#photo{
+    background-color: rgb(247, 245, 242);
+    color: white;
+    
+}
+
+.one > img{
+
+    height: 408px;
+    width:612px;
+    object-fit:cover;
+    padding-right:30px;
+    float:left;
+    
+}
+
+.one{
+    
+    background-color: rgb(247, 245, 242);
+    height: 408px;
+}
+
+.room-address{
+    display:grid;
+    grid-template-columns: 120px 120px;
+    padding-bottom: 10px;
+}
+
+.singleInfo{
+    padding-top:25px;
+}
+#type-display{
+    background-color:rgb(209, 182, 26);
+    width:100px;
+    text-align: center;
+    height:30px;
+    margin-left:20px;
+}
+
+.price-type{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.email{
+    margin-top:25px;
+    padding:12px 20px;
+    background-color: rgb(8, 167, 167);
+    border:none;
+    color:white;
+    border-radius: 10%;
+    text-align: center;
+    
 }
 

@@ -9,17 +9,17 @@
         <div class="singleInfo">
             <h2>{{property.title}}</h2>
             <div class="price-type">
-                <span class="price">${{property.price}} </span>
-                <span class="price">{{property.type}} </span>
+                <span class="price-all">${{property.price}} </span>
+                <span class="price-all" id="type-display"> {{property.type}} </span>
             </div>
 
             <p>{{property.description}}</p>
 
             <div class="room-address">
-                <span> <ion-icon name="bed-outline"></ion-icon> {{property.bedrooms}} bedrooms</span>
-                <span> <ion-icon name="storefront-outline"></ion-icon> {{property.bathrooms}} bathrooms</span>
-                <span> <ion-icon name="location-outline"></ion-icon> {{property.location}}</span>
+                <div> <ion-icon name="bed-outline"></ion-icon> {{property.bedrooms}} bedrooms</div>
+                <div> <ion-icon name="storefront-outline"></ion-icon> {{property.bathrooms}} bathrooms</div>
             </div>
+            <div> <ion-icon name="location-outline"></ion-icon> {{property.location}}</div>
             <button class="email">Email Realtor</button>
         </div>
     </div>

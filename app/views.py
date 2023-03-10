@@ -56,7 +56,7 @@ def create():
             traceback.print_exc()
 
 
-        return redirect(url_for('home'))
+        return redirect(url_for('properties'))
 
 
     flash_errors(form)
@@ -72,16 +72,16 @@ def oneProperty(propertyid):
     property = PropertyInfo.query.filter_by(id=propertyid).first()
     return render_template('propInfo.html', property=property)
 
-@app.route('/')
+@app.route('/properties')
 def home():
     """Render website's home page."""
-    return render_template('home.html')
+    return render_template('properties.html')
 
 
-@app.route('/about/')
+@app.route('/properties')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('properties.html')
 
 
 ###
