@@ -72,10 +72,11 @@ def oneProperty(propertyid):
     property = PropertyInfo.query.filter_by(id=propertyid).first()
     return render_template('propInfo.html', property=property)
 
-@app.route('/properties')
+@app.route('/')
 def home():
     """Render website's home page."""
-    return render_template('properties.html')
+    properties=PropertyInfo.query.all()
+    return render_template('properties.html',properties=properties)
 
 
 @app.route('/properties')
